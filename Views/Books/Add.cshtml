@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Add Books";
+}
+
+<h1>Add a book</h1>
+
+<form action="">
+    <div class="mt-3">
+        <label for="form-label">Title</label>
+        <input type="text" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <label for="form-label">ISBN</label>
+        <input type="text" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <label for="form-label">Price</label>
+        <input type="text" class="form-control" />
+    </div>
+
+    <div class="mt-3">
+        <label for="form-label">Date</label>
+        <input type="text" class="form-control" />
+    </div>
+
+    <div>
+        @* <label for="">AuthorId</label> *@
+        @* <select asp-for="" asp-items="ViewBag.AuthorId"></select> *@
+    </div>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">
+            Create
+        </button>
+    </div>
+</form>

@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Books Page";
+}
+
+<div class="bg-secondary text-white text-center p-5">
+    <h1 class="display-4">ARTHUR SECTION</h1>
+</div>
+
+<div class="mt-3">
+    <button class="btn btn-info">
+        <a class="badge" asp-area="" asp-controller="Authors" asp-action="Add">
+            Add an Author
+        </a>
+    </button>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Biography</th>
+            <th></th>
+        </tr>
+    </thead>
+    @* <tbody>
+    @foreach (var author in Model)
+    {
+    <tr>
+    <td>@author.AuthorId</td>
+    <td>@author.Name</td>
+    <td>@author.Biography</td>
+    <td>
+    <a href="">Edit</a>
+    </td>
+    </tr>
+    }
+    </tbody> *@
+</table>
