@@ -42,7 +42,7 @@ public class BooksController : Controller
                 return View(book);
             }
 
-            var work = new Book
+            var newBook = new Book
             {
                 Title = book.Title,
                 ISBN = book.ISBN,
@@ -50,7 +50,7 @@ public class BooksController : Controller
                 BorrowingDate = book.BorrowingDate,
                 AuthorId = book.AuthorId
             };
-            await dbContext.Books.AddAsync(work);
+            await dbContext.Books.AddAsync(newBook);
             await dbContext.SaveChangesAsync();
 
             return RedirectToAction("List");
@@ -80,7 +80,7 @@ public class BooksController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(Book book)
+    public async Task<IActionResult> Edit(Guid id, Book book)
     {
         if (ModelState.IsValid)
         {
@@ -95,7 +95,19 @@ public class BooksController : Controller
                 );
                 return View(book);
             }
-            dbContext.Update(book);
+
+            var work = await dbContext.Books.FindAsync(id);
+            if (work == null)
+            {
+                return NotFound();
+            }
+
+            work.Title = book.Title;
+            work.ISBN = book.ISBN;
+            work.Price = book.Price;
+            work.BorrowingDate = book.BorrowingDate;
+            work.AuthorId = book.AuthorId;
+
             await dbContext.SaveChangesAsync();
             return RedirectToAction("List");
         }

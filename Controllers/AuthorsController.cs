@@ -56,9 +56,17 @@ public class AuthorsController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(Author author)
+    public async Task<IActionResult> Edit(Guid id, Author author)
     {
-        dbContext.Update(author);
+        var auth = dbContext.Authors.Find(id);
+        if (auth is null)
+        {
+            return NotFound();
+        }
+
+        auth.Name = author.Name;
+        auth.Biography = author.Biography;
+
         await dbContext.SaveChangesAsync();
         return RedirectToAction("List");
     }
