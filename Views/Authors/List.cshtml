@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Authors Page";
+}
+
+@model List<system.Models.Author>
+
+<div class="bg-secondary text-white text-center p-5">
+    <h1 class="display-4">AUTHOR SECTION</h1>
+</div>
+
+<div class="mt-3">
+    <a class="btn btn-primary btn-lg active" role="button" asp-area="" asp-controller="Authors" asp-action="Add">
+        Add an Author
+    </a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Biography</th>
+            <th>Author's Books</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                @* <td>@author.AuthorId</td> *@
+                <td>@author.Name</td>
+                <td>@author.Biography</td>
+                <td>
+                    @if (author.Books != null && author.Books.Any())
+                    {
+                        <ul>
+                            @foreach (var book in author.Books)
+                            {
+                                <li>@book.Title</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span>No books available</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@author.AuthorId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@author.AuthorId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

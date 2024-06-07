@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7NPtKRluC/1TSHjIEN7TxsOfpqQ3djonvyzW7i8ZGUM=",
+  "Hash": "Ll+8UDqTBjQ5FfTbUXWOptt0EHYmwJS2aJKV+DSfCcY=",
   "Source": "system",
   "BasePath": "_content/system",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\system\\wwwroot\\Images\\booklogo.png",
+      "SourceId": "system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\system\\wwwroot\\",
+      "BasePath": "_content/system",
+      "RelativePath": "Images/booklogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\booklogo.png"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\system\\wwwroot\\js\\site.js",

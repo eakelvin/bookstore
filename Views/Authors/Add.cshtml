@@ -1,18 +1,19 @@
 @{
     ViewData["Title"] = "Authors";
 }
+@model system.Models.Author
 
 <h2>Add an Author</h2>
 
 <form method="post">
     <div class="mt-3">
         <label for="form-label">Name</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" asp-for="Name" />
     </div>
 
     <div class="mt-3">
         <label for="form-label">Biography</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" asp-for="Biography" />
     </div>
 
     <div class="mt-3">

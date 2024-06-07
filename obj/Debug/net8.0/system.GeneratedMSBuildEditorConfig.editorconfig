@@ -22,16 +22,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/system/Views/Authors/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xJbmRleC5jc2h0bWw=
+[C:/Users/Administrator/Desktop/system/Views/Authors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/system/Views/Authors/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/system/Views/Books/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrator/Desktop/system/Views/Books/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSW5kZXguY3NodG1s
+[C:/Users/Administrator/Desktop/system/Views/Books/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/system/Views/Books/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/system/Views/Dashboard/Index.cshtml]

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\system.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\system\\wwwroot\\Images\\booklogo.png",
+      "PackagePath": "staticwebassets\\Images\\booklogo.png"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\system\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
