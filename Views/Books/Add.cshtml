@@ -36,6 +36,10 @@
         <select asp-for="AuthorId" asp-items="ViewBag.Authors" class="form-control">
             <option value="">Select an Author</option>
         </select>
+        <p>
+            NB: If no Author is available
+            <a class="" asp-controller="Authors" asp-action="Add">Click here to add an Author</a>
+        </p>
         <span asp-validation-for="AuthorId" class="text-danger"></span>
     </div>
 

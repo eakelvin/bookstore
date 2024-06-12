@@ -15,19 +15,19 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
     {
         base.OnModelCreating(modelBuilder);
 
-        // Configure the Author-Book relationship
+        //  Author-Book relationship
         modelBuilder.Entity<Author>()
             .HasMany(a => a.Books)
             .WithOne(b => b.Author)
             .HasForeignKey(b => b.AuthorId);
 
-        // Configure the Book-Rental relationship
+        // Book-Rental relationship
         modelBuilder.Entity<Book>()
             .HasMany(b => b.Rentals)
             .WithOne(r => r.Book)
             .HasForeignKey(r => r.BookId);
 
-        // Configure the Price property of Book
+        // Price property of Book
         modelBuilder.Entity<Book>()
             .Property(b => b.Price)
             .HasColumnType("decimal(18,2)");

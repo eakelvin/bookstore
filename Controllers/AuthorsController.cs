@@ -36,14 +36,18 @@ public class AuthorsController : Controller
         await dbContext.Authors.AddAsync(auth);
         await dbContext.SaveChangesAsync();
 
-        // return View();
         return RedirectToAction("List");
     }
 
     [HttpGet]
-    public async Task<IActionResult> List()
+    public async Task<IActionResult> List(string searchString)
     {
-        var authors = await dbContext.Authors.Include(a => a.Books).ToListAsync();
+        var query = dbContext.Authors.Include(a => a.Books).AsQueryable();
+        if (!String.IsNullOrEmpty(searchString))
+        {
+            query = query.Where(n => n.Name!.ToLower().Contains(searchString.ToLower()));
+        }
+        var authors = await query.ToListAsync();
         return View(authors);
     }
 

@@ -5,7 +5,6 @@ using system.Models;
 
 namespace system.Controllers;
 
-[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

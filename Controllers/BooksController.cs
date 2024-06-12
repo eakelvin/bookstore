@@ -59,9 +59,14 @@ public class BooksController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> List()
+    public async Task<IActionResult> List(string searchString)
     {
-        var books = await dbContext.Books.Include(b => b.Author).ToListAsync();
+        var query = dbContext.Books.Include(a => a.Author).AsQueryable();
+        if (!String.IsNullOrEmpty(searchString))
+        {
+            query = query.Where(n => n.Title!.ToLower().Contains(searchString.ToLower()));
+        }
+        var books = await query.ToListAsync();
         return View(books);
     }
 
