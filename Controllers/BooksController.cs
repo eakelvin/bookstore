@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -5,6 +6,8 @@ using system.Data;
 using system.Models;
 
 namespace system.Controllers;
+
+[Authorize]
 public class BooksController : Controller
 {
     private readonly ApplicationDbContext dbContext;
@@ -17,11 +20,6 @@ public class BooksController : Controller
     {
         return View();
     }
-
-    // public IActionResult Add()
-    // {
-    //     return View();
-    // }
 
     public IActionResult Add()
     {

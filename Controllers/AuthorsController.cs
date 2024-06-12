@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using system.Data;
@@ -5,6 +6,7 @@ using system.Models;
 
 namespace system.Controllers;
 
+[Authorize]
 public class AuthorsController : Controller
 {
     private readonly ApplicationDbContext dbContext;
