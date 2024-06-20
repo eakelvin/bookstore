@@ -1,0 +1,83 @@
+@{
+    ViewData["Title"] = "User Dashboard";
+}
+
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <h1 class="mb-5">Welcome to BookStore</h1>
+                    <div class="d-flex justify-content-center mb-5">
+                        <div>
+                            <a class="btn btn-primary btn-lg active" role="button" asp-area="" asp-controller="Authors"
+                                asp-action="List">
+                                Browse Authors
+                            </a>
+                        </div>
+                        <div class="px-2">
+                            <a asp-area="" asp-controller="Books" asp-action="Add" class="btn btn-success btn-lg active"
+                                role="button" aria-pressed="true">
+                                Publish Books
+                            </a>
+                        </div>
+                        <a asp-area="" asp-controller="Books" asp-action="Add" class="btn btn-secondary btn-lg active"
+                            role="button" aria-pressed="true">
+                            Rent a Book
+                        </a>
+                    </div>
+                    <form class="form-subscribe">
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-control-lg" id="emailAddress" type="email"
+                                    placeholder="Search" data-sb-validations="required,email" />
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                    type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container bg-trasparent my-4 p-3">
+    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-3">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Book title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Available for rental</h6>
+                    <p class="card-text">Book Price.</p>
+                    <p class="card-text">Book ISBN</p>
+                    <a href="#" class="card-link">Book Author</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card px-1" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Book title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Available for rental</h6>
+                    <p class="card-text">Book Price</p>
+                    <p class="card-text">Book ISBN</p>
+                    <a href="#" class="card-link">Book Author</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Book title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Cannot rent</h6>
+                    <p class="card-text">Book Price</p>
+                    <p class="card-text">Book ISBN</p>
+                    <a href="#" class="card-link">Book Author</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
